@@ -11,9 +11,11 @@ import "../css/global.css";
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>Astro</title>
-        <Font cssVariable="--font-m-plus-rounded-1c" preload={[{ weight: 400 }]} />
+        <Font cssVariable="--font-m-plus-rounded-1c" preload={[{ weight: 500 }]} />
     </head>
-    <body class="font-m-plus-rounded-1c">
-        <slot />
+    <body class="min-h-screen w-full overflow-hidden bg-neutral-300 font-m-plus-rounded-1c font-medium text-black dark:bg-olive-950 dark:text-white">
+        <main id="main-content-scroll-container" class="h-screen overflow-auto">
+            <slot />
+        </main>
     </body>
 </html>
