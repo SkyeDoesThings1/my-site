@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+@theme inline {
+    --font-m-plus-rounded-1c: var(--font-m-plus-rounded-1c);
+}

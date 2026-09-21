@@ -1,4 +1,5 @@
 ---
+import { Font } from "astro:assets";
 import "../css/global.css";
 ---
 
@@ -10,8 +11,9 @@ import "../css/global.css";
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>Astro</title>
+        <Font cssVariable="--font-m-plus-rounded-1c" preload={[{ weight: 400 }]} />
     </head>
-    <body>
+    <body class="font-m-plus-rounded-1c">
         <slot />
     </body>
 </html>
