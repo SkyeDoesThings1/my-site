@@ -5,6 +5,8 @@ import { defineConfig, fontProviders } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
+    site: "https://skyedoesthings1.github.io/",
+    base: "/",
     trailingSlash: "always",
     output: "static",
     integrations: [icon()],
