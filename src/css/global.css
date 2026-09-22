@@ -18,3 +18,20 @@
     height: 100%;
     pointer-events: none;
 }
+
+#main-content-scroll-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse 120% 40% at 50% -15%, rgba(255, 255, 255, 0.15), transparent 70%);
+    pointer-events: none;
+}
+
+@media (min-width: 640px) {
+    #main-content-scroll-container::after {
+        background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 255, 255, 0.15), transparent 70%);
+    }
+}
