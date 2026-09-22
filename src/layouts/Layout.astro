@@ -5,6 +5,13 @@ import "../css/global.css";
 interface Props {
     subtitle: string;
 }
+
+const navItems = [
+    { href: "/", label: "Home" },
+    { href: "/about/", label: "About" },
+];
+
+const currentPath = Astro.url.pathname;
 ---
 
 <html lang="en">
@@ -17,9 +24,42 @@ interface Props {
         <title>Skye's Site - {Astro.props.subtitle}</title>
         <Font cssVariable="--font-m-plus-rounded-1c" preload={[{ weight: 500 }]} />
     </head>
-    <body class="min-h-screen w-full overflow-hidden bg-olive-950 font-m-plus-rounded-1c font-medium text-olive-50">
-        <main id="main-content-scroll-container" class="h-screen overflow-auto">
-            <slot />
-        </main>
+    <body class="min-h-screen w-full overflow-hidden bg-olive-950 font-m-plus-rounded-1c font-medium text-olive-200 lowercase">
+        <div id="main-content-scroll-container" class="h-screen overflow-auto">
+            <nav class="flex justify-end px-6 py-4">
+                <ul class="flex gap-6">
+                    <li>
+                        <a
+                            href="/"
+                            aria-current={currentPath === "/" ? "page" : undefined}
+                            class:list={["text-sm font-semibold tracking-wide transition-colors", currentPath === "/" ? "text-pink-300" : "text-olive-50 hover:text-olive-400"]}
+                        >
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="/about/"
+                            aria-current={currentPath === "/about/" ? "page" : undefined}
+                            class:list={[
+                                "text-sm font-semibold tracking-wide transition-colors",
+                                currentPath === "/about/" ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
+                            ]}
+                        >
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <main>
+                <div class="flex min-h-full flex-col items-center justify-center px-6 py-24 sm:px-12">
+                    <div class="w-full max-w-2xl">
+                        <slot />
+                    </div>
+                </div>
+            </main>
+        </div>
     </body>
 </html>
