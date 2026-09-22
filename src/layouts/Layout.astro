@@ -5,8 +5,6 @@ import "../css/global.css";
 interface Props {
     subtitle: string;
 }
-
-const currentPath = Astro.url.pathname;
 ---
 
 <html lang="en">
@@ -26,8 +24,11 @@ const currentPath = Astro.url.pathname;
                     <li>
                         <a
                             href="/"
-                            aria-current={currentPath === "/" ? "page" : undefined}
-                            class:list={["text-sm font-semibold tracking-wide transition-colors", currentPath === "/" ? "text-pink-300" : "text-olive-50 hover:text-olive-400"]}
+                            aria-current={Astro.url.pathname === "/" ? "page" : undefined}
+                            class:list={[
+                                "text-sm font-semibold tracking-wide transition-colors",
+                                Astro.url.pathname === "/" ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
+                            ]}
                         >
                             Home
                         </a>
@@ -36,10 +37,10 @@ const currentPath = Astro.url.pathname;
                     <li>
                         <a
                             href="/about/"
-                            aria-current={currentPath === "/about/" ? "page" : undefined}
+                            aria-current={Astro.url.pathname === "/about/" ? "page" : undefined}
                             class:list={[
                                 "text-sm font-semibold tracking-wide transition-colors",
-                                currentPath === "/about/" ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
+                                Astro.url.pathname === "/about/" ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
                             ]}
                         >
                             About
@@ -48,13 +49,25 @@ const currentPath = Astro.url.pathname;
                     <li>
                         <a
                             href="/music/"
-                            aria-current={currentPath === "/music/" ? "page" : undefined}
+                            aria-current={Astro.url.pathname === "/music/" ? "page" : undefined}
                             class:list={[
                                 "text-sm font-semibold tracking-wide transition-colors",
-                                currentPath === "/music/" ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
+                                Astro.url.pathname === "/music/" ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
                             ]}
                         >
                             Music
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="/blog/"
+                            aria-current={Astro.url.pathname === "/blog/" ? "page" : undefined}
+                            class:list={[
+                                "text-sm font-semibold tracking-wide transition-colors",
+                                Astro.url.pathname === "/blog/" ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
+                            ]}
+                        >
+                            Blog
                         </a>
                     </li>
                 </ul>

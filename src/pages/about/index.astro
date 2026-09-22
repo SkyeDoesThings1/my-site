@@ -1,0 +1,104 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout subtitle="About">
+    <p class="mb-4 text-center text-sm font-semibold tracking-[0.2em] text-olive-400 uppercase">Nice to Meet You</p>
+
+    <h1 class="text-center text-5xl font-semibold sm:text-6xl">About Me</h1>
+
+    <div class="mx-auto my-8 h-px w-16 bg-linear-to-r from-transparent via-pink-500 to-transparent"></div>
+
+    <p class="mx-auto max-w-2xl text-center text-lg leading-relaxed text-olive-100/90 sm:text-xl">
+        Hi, I'm Skyler, also known as Skye, SkyeDoesThings, etc. I am a 14 year old transbian web developer! I work in languages like JavaScript/TypeScript and have experience with
+        frameworks such as Vue.js, Astro.js <span class="text-olive-400"> (what this site is made in!)</span>, Express.js, and more!
+    </p>
+
+    <div class="mx-auto mt-12 grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-2">
+        <div
+            class="flex flex-col gap-1 rounded-2xl border border-pink-300 bg-olive-900/60 p-5 shadow-lg shadow-black/30 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-olive-600 sm:p-6"
+        >
+            <span class="text-[0.7rem] font-semibold tracking-[0.15em] text-olive-400 uppercase">Name</span>
+            <span class="text-lg font-medium">Skyler (Skye)</span>
+        </div>
+
+        <div
+            class="flex flex-col gap-1 rounded-2xl border border-pink-300 bg-olive-900/60 p-5 shadow-lg shadow-black/30 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-olive-600 sm:p-6"
+        >
+            <span class="text-[0.7rem] font-semibold tracking-[0.15em] text-olive-400 uppercase">Pronouns</span>
+            <span class="text-lg font-medium">She/They</span>
+        </div>
+    </div>
+
+    <div class="mx-auto mt-12 max-w-3xl rounded-2xl border border-pink-300 bg-olive-900/60 p-6 shadow-lg shadow-black/30 backdrop-blur-sm sm:p-8">
+        <p class="mb-6 text-center text-xs font-semibold tracking-[0.2em] text-olive-400 uppercase">Tech I Use</p>
+
+        <div class="flex flex-wrap justify-center gap-3">
+            <div class="group relative flex items-center justify-center rounded-xl p-3 transition-colors duration-300 hover:bg-olive-800/60" title="TypeScript">
+                <Icon
+                    name="simple-icons:typescript"
+                    class="h-10 w-10 opacity-60 grayscale transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:opacity-100 group-hover:grayscale-0"
+                    style={{ color: "#3178C6" }}
+                />
+                <span
+                    class="pointer-events-none absolute -bottom-6 left-1/2 -translate-x-1/2 text-[0.65rem] whitespace-nowrap text-olive-400 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                    TypeScript
+                </span>
+            </div>
+
+            <div class="group relative flex items-center justify-center rounded-xl p-3 transition-colors duration-300 hover:bg-olive-800/60" title="JavaScript">
+                <Icon
+                    name="simple-icons:javascript"
+                    class="h-10 w-10 opacity-60 grayscale transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:opacity-100 group-hover:grayscale-0"
+                    style={{ color: "#F7DF1E" }}
+                />
+                <span
+                    class="pointer-events-none absolute -bottom-6 left-1/2 -translate-x-1/2 text-[0.65rem] whitespace-nowrap text-olive-400 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                    JavaScript
+                </span>
+            </div>
+
+            <div class="group relative flex items-center justify-center rounded-xl p-3 transition-colors duration-300 hover:bg-olive-800/60" title="Vue.js">
+                <Icon
+                    name="simple-icons:vuedotjs"
+                    class="h-10 w-10 opacity-60 grayscale transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:opacity-100 group-hover:grayscale-0"
+                    style={{ color: "#4FC08D" }}
+                />
+                <span
+                    class="pointer-events-none absolute -bottom-6 left-1/2 -translate-x-1/2 text-[0.65rem] whitespace-nowrap text-olive-400 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                    Vue.js
+                </span>
+            </div>
+
+            <div class="group relative flex items-center justify-center rounded-xl p-3 transition-colors duration-300 hover:bg-olive-800/60" title="Astro">
+                <Icon
+                    name="simple-icons:astro"
+                    class="h-10 w-10 opacity-60 grayscale transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:opacity-100 group-hover:grayscale-0"
+                    style={{ color: "#FF5D01" }}
+                />
+                <span
+                    class="pointer-events-none absolute -bottom-6 left-1/2 -translate-x-1/2 text-[0.65rem] whitespace-nowrap text-olive-400 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                    Astro
+                </span>
+            </div>
+
+            <div class="group relative flex items-center justify-center rounded-xl p-3 transition-colors duration-300 hover:bg-olive-800/60" title="Nuxt">
+                <Icon
+                    name="simple-icons:bun"
+                    class="h-10 w-10 opacity-60 grayscale transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:opacity-100 group-hover:grayscale-0"
+                    style={{ color: "#F2E7D7" }}
+                />
+                <span
+                    class="pointer-events-none absolute -bottom-6 left-1/2 -translate-x-1/2 text-[0.65rem] whitespace-nowrap text-olive-400 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                    Bun
+                </span>
+            </div>
+        </div>
+    </div>
+</Layout>
