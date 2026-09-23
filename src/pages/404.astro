@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+export const prerender = true;
+---
+
+<Layout subtitle="Music">
+    <p class="mb-4 text-center text-sm font-semibold tracking-[0.2em] text-olive-400 uppercase">HTTP Error 404</p>
+
+    <h1 class="text-center text-5xl font-semibold sm:text-6xl">
+        <Icon class="inline text-red-500" name="svg-repo/x-thin" /> Not Found
+    </h1>
+
+    <div class="mx-auto my-8 h-px w-16 bg-linear-to-r from-transparent via-pink-500 to-transparent"></div>
+
+    <p class="mx-auto max-w-2xl text-center text-lg leading-relaxed text-olive-100/90 sm:text-xl">The content you are looking for is not found. Perhaps the page was deleted?</p>
+
+    <div class="mx-auto mt-12 flex max-w-3xl flex-col items-center rounded-2xl border border-pink-300 bg-olive-900/60 p-6 shadow-lg shadow-black/30 backdrop-blur-sm sm:p-8">
+        <p class="mb-6 text-center text-xs font-semibold tracking-[0.2em] text-olive-400 uppercase">Home</p>
+
+        <div class="flex flex-wrap justify-center gap-3">
+            <a
+                href="/"
+                class="group inline-flex items-center gap-2 rounded-xl border border-pink-300/50 px-4 py-2.5 text-sm font-semibold tracking-wide text-pink-300 transition-all duration-300 hover:-translate-y-0.5 hover:gap-3 hover:border-pink-300 hover:bg-pink-300 hover:text-olive-950"
+                data-astro-prefetch
+            >
+                Go back home
+                <Icon name="untitled-ui/arrow-right" />
+            </a>
+        </div>
+    </div>
+</Layout>
