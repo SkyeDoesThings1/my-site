@@ -12,7 +12,6 @@
         "format": "prettier --write ."
     },
     "dependencies": {
-        "@iconify-json/simple-icons": "^1.2.97",
         "@tailwindcss/vite": "^4.3.3",
         "astro": "^7.3.3",
         "astro-icon": "^1.2.0",
