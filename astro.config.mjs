@@ -12,7 +12,9 @@ export default defineConfig({
     trailingSlash: "always",
     integrations: [icon()],
     output: "server",
-    adapter: cloudflare(),
+    adapter: cloudflare({
+        imageService: "compile",
+    }),
     cache: {
         provider: cacheCloudflare(),
     },
