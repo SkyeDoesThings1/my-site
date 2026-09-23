@@ -33,6 +33,7 @@ interface Props {
                                 "text-sm font-semibold tracking-wide transition-colors",
                                 Astro.url.pathname === "/" ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
                             ]}
+                            data-astro-prefetch
                         >
                             Home
                         </a>
@@ -46,6 +47,7 @@ interface Props {
                                 "text-sm font-semibold tracking-wide transition-colors",
                                 Astro.url.pathname.startsWith("/about/") ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
                             ]}
+                            data-astro-prefetch
                         >
                             About
                         </a>
@@ -58,6 +60,7 @@ interface Props {
                                 "text-sm font-semibold tracking-wide transition-colors",
                                 Astro.url.pathname.startsWith("/music/") ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
                             ]}
+                            data-astro-prefetch
                         >
                             Music
                         </a>
@@ -70,6 +73,7 @@ interface Props {
                                 "text-sm font-semibold tracking-wide transition-colors",
                                 Astro.url.pathname.startsWith("/blog/") ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
                             ]}
+                            data-astro-prefetch
                         >
                             Blog
                         </a>
