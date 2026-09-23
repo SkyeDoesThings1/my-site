@@ -39,10 +39,10 @@ export const prerender = true;
                     <li>
                         <a
                             href="/about/"
-                            aria-current={Astro.url.pathname === "/about/" ? "page" : undefined}
+                            aria-current={Astro.url.pathname.startsWith("/about/") ? "page" : undefined}
                             class:list={[
                                 "text-sm font-semibold tracking-wide transition-colors",
-                                Astro.url.pathname === "/about/" ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
+                                Astro.url.pathname.startsWith("/about/") ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
                             ]}
                         >
                             About
@@ -51,10 +51,10 @@ export const prerender = true;
                     <li>
                         <a
                             href="/music/"
-                            aria-current={Astro.url.pathname === "/music/" ? "page" : undefined}
+                            aria-current={Astro.url.pathname.startsWith("/music/") ? "page" : undefined}
                             class:list={[
                                 "text-sm font-semibold tracking-wide transition-colors",
-                                Astro.url.pathname === "/music/" ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
+                                Astro.url.pathname.startsWith("/music/") ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
                             ]}
                         >
                             Music
@@ -63,10 +63,10 @@ export const prerender = true;
                     <li>
                         <a
                             href="/blog/"
-                            aria-current={Astro.url.pathname === "/blog/" ? "page" : undefined}
+                            aria-current={Astro.url.pathname.startsWith("/blog/") ? "page" : undefined}
                             class:list={[
                                 "text-sm font-semibold tracking-wide transition-colors",
-                                Astro.url.pathname === "/blog/" ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
+                                Astro.url.pathname.startsWith("/blog/") ? "text-pink-300" : "text-olive-50 hover:text-olive-400",
                             ]}
                         >
                             Blog
