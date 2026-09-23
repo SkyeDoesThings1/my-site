@@ -1,9 +1,9 @@
 // @ts-check
-import vercel from "@astrojs/vercel";
+import cloudflare from "@astrojs/cloudflare";
 import icon from "astro-icon";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, fontProviders } from "astro/config";
-import { cacheVercel } from "@astrojs/vercel/cache";
+import { cacheCloudflare } from "@astrojs/cloudflare/cache";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,9 +12,9 @@ export default defineConfig({
     trailingSlash: "always",
     integrations: [icon()],
     output: "server",
-    adapter: vercel(),
+    adapter: cloudflare(),
     cache: {
-        provider: cacheVercel(),
+        provider: cacheCloudflare(),
     },
     vite: {
         plugins: [tailwindcss()],
