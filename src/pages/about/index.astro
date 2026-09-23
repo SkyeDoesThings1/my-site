@@ -3,6 +3,25 @@ import Layout from "../../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 
 export const prerender = true;
+
+function getAge() {
+    const easternDateString = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/New_York",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+    }).format(new Date());
+
+    const [month, day, year] = easternDateString.split("/").map(Number);
+
+    let age = year - 2011;
+
+    if (month < 11 || (month === 11 && day < 13)) {
+        age--;
+    }
+
+    return age;
+}
 ---
 
 <Layout subtitle="About">
@@ -13,8 +32,8 @@ export const prerender = true;
     <div class="mx-auto my-8 h-px w-16 bg-linear-to-r from-transparent via-pink-500 to-transparent"></div>
 
     <p class="mx-auto max-w-2xl text-center text-lg leading-relaxed text-olive-100/90 sm:text-xl">
-        Hi, I'm Skyler, also known as Skye, SkyeDoesThings, etc. I am a 14 year old transbian web developer! I work in languages like JavaScript/TypeScript and have experience with
-        frameworks such as Vue.js, Astro.js <span class="text-olive-400"> (what this site is made in!)</span>, Express.js, and more!
+        Hi, I'm Skyler, also known as Skye, SkyeDoesThings, etc. I am a {getAge()} year old transbian web developer! I work in languages like JavaScript/TypeScript and have experience
+        with frameworks such as Vue.js, Astro.js <span class="text-olive-400"> (what this site is made in!)</span>, Express.js, and more!
     </p>
 
     <div class="mx-auto mt-12 grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-2">
