@@ -1,4 +1,5 @@
 // @ts-check
+import vercel from "@astrojs/vercel";
 import icon from "astro-icon";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, fontProviders } from "astro/config";
@@ -8,8 +9,9 @@ export default defineConfig({
     site: "https://skyedoesthings1.github.io/",
     base: "/",
     trailingSlash: "always",
-    output: "static",
     integrations: [icon()],
+    output: "server",
+    adapter: vercel(),
     vite: {
         plugins: [tailwindcss()],
     },
