@@ -3,6 +3,7 @@ import vercel from "@astrojs/vercel";
 import icon from "astro-icon";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, fontProviders } from "astro/config";
+import { cacheVercel } from "@astrojs/vercel/cache";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,6 +13,9 @@ export default defineConfig({
     integrations: [icon()],
     output: "server",
     adapter: vercel(),
+    cache: {
+        provider: cacheVercel(),
+    },
     vite: {
         plugins: [tailwindcss()],
     },
@@ -26,5 +30,13 @@ export default defineConfig({
     ],
     build: {
         assets: "assets",
+    },
+    image: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "i.scdn.co",
+            },
+        ],
     },
 });
