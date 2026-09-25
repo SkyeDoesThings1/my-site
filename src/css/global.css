@@ -2,4 +2,6 @@
 
 @theme inline {
     --font-m-plus-rounded-1c: var(--font-m-plus-rounded-1c);
+    --text-20xl: 5rem;
+    --text-20xl--line-height: 1;
 }
